@@ -13,3 +13,19 @@ Error 1 ->
       
       link - > https://stackoverflow.com/questions/49515100/gradle-sync-failed-with-android-studio-3-1-uninitialized-object-exists-on-backw#comment86058048_49518396
 ------------------------------------------------------------------------------------------------------------------------------------------
+
+Error 2 ->
+
+      #Failed to load AppCompat ActionBar with unknown error in android studio  Render problem for layouts
+      
+      change the style.xml 
+      
+      <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+      </style>
+      
+      to:
+
+      <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+      </style>
+      
+------------------------------------------------------------------------------------------------------------------------------------------   
