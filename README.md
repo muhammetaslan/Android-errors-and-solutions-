@@ -29,3 +29,9 @@ Error 2 ->
       </style>
       
 ------------------------------------------------------------------------------------------------------------------------------------------   
+
+Error 3 -> 
+
+      # Namespace 'app' is not bound
+      Just add xmlns:app="http://schemas.android.com/apk/res-auto" in the menu item property
+      or alt+enter add quickly. 
