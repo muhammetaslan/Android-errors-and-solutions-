@@ -1,5 +1,17 @@
 NOTE
 
 #1 - Android Support Libraries
+
     Android support libraries bize eski versiyon API ler ile çalışma imkanı sağlar.
+    Şuan için android support library support.v4 ile support.v7 aynı düzeyde minumum api level 14 detekler ve üstünü
+    Şuan ki android release'ları için base API 14 tür.
+
+------------------------------------------------------------------------------------------------------------------------
+
+#2 - How to learn android package dependencies
     
+    Aşşadaki komutu root application dosyasında çalıştırarak öğremebiliriz.
+    
+    $ gradle -q dependencies your-app-project:dependencies
+    
+------------------------------------------------------------------------------------------------------------------------
