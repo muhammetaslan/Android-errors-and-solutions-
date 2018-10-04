@@ -43,7 +43,21 @@ Error 4 ->
 
       # Permission is only granted to system app 
       # Issue id : ProtectedPermissions
+    
       # https://stackoverflow.com/questions/38072616/permission-required-to-use-usagestatsmanager
+      
       # <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    
       # add xmlns:tools="http://schemas.android.com/tools" into manifest tag
+
+------------------------------------------------------------------------------------------------------------------------------------------  
+
+Error 5 ->
+
+      # Failed to finalize session : INSTALL_FAILED_SHARED_USER_INCOMPATIBLE: Package couldn't be installed in 
+      has no signatures that match those in shared user android.uid.system; ignoring!
+      
+      # Change the  android:sharedUserId="" in manifest file.
+      
+------------------------------------------------------------------------------------------------------------------------------------------       
