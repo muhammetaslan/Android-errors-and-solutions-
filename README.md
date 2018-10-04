@@ -35,3 +35,15 @@ Error 3 ->
       # Namespace 'app' is not bound
       Just add xmlns:app="http://schemas.android.com/apk/res-auto" in the menu item property
       or alt+enter add quickly. 
+      
+      
+------------------------------------------------------------------------------------------------------------------------------------------   
+
+Error 4 ->
+
+      # Permission is only granted to system app 
+      # Issue id : ProtectedPermissions
+      # https://stackoverflow.com/questions/38072616/permission-required-to-use-usagestatsmanager
+      # <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+      # add xmlns:tools="http://schemas.android.com/tools" into manifest tag
