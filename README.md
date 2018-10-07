@@ -61,3 +61,13 @@ Error 5 ->
       # Change the  android:sharedUserId="" in manifest file.
       
 ------------------------------------------------------------------------------------------------------------------------------------------       
+
+Error 6 -> 
+
+      # attribute ':menu' not found. or attribute ':headerLayout' not found. 
+      
+      # add to build.gradle file dependencies 
+      # implementation 'com.android.support:design:28.0.0'   
+      # <28.0.0> version should be same appcompat version
+      
+------------------------------------------------------------------------------------------------------------------------------------------       
