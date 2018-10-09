@@ -15,3 +15,20 @@ NOTE
     $ gradle -q dependencies your-app-project:dependencies
     
 ------------------------------------------------------------------------------------------------------------------------
+
+#3 - Android adb connection and remove and install .apk
+
+    $ adb root
+    $ adb shell
+    
+    // Uygulama dizinine git  : 
+    $ cd system/priv-app/smartmirror/<apk can be diffrent>SmartMirrorApp.apk
+    
+    // bu iki komut çalıştır yetki için yazma okuma izni
+    $ mount -o rw,remount /system
+    
+    // Dizindeki apk sil : 
+    $ rm -rf *
+    $ exit 
+    // adb shell den cık
+    $ adb push <yeni apk> system/priv-app/smartmirror/ (dosya yolu)
