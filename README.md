@@ -71,3 +71,12 @@ Error 6 ->
       # <28.0.0> version should be same appcompat version
       
 ------------------------------------------------------------------------------------------------------------------------------------------       
+
+Error 7 ->
+
+      # Error:Failed to crunch file C:\Users 
+      
+      # The file path of project too long, so project do not build properly. You should change project short path 
+        < C:/user/desktop/.. > example
+
+------------------------------------------------------------------------------------------------------------------------------------------ 
