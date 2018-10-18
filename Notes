@@ -32,3 +32,30 @@ NOTE
     $ exit 
     // adb shell den cık
     $ adb push <yeni apk> system/priv-app/smartmirror/ (dosya yolu)
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+#4 - Connecting adb process
+       
+       -> you can use wifi or bluetooth network for wiresless debuging
+       -> for the wifi connction be careful for any firewall and contsraints in network
+       
+    1) connect the adb host devices and android devices with USB cable.
+    
+    // host devices listen the port 5555
+    $adb tcpip 5555
+    
+    2) disconnect the usb connection
+    
+    $adb connect <device_ip_address>
+    
+    $ adb devices
+    List of devices attached
+    device_ip_address:5555 device
+    
+    // kill the all connection
+    $adb kill-server
+    
+    
+    
