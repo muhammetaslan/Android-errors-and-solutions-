@@ -80,3 +80,16 @@ Error 7 ->
         < C:/user/desktop/.. > example
 
 ------------------------------------------------------------------------------------------------------------------------------------------ 
+
+Error 8 ->
+      
+      # android.view.WindowManager$BadTokenException: Unable to add window android.view.ViewRootImpl$W@a59d688 -- permission denied for window type 2038
+      
+      # This means that the "Draw over Apps" permission is currently disabled for LastPass on your device. This permission is only required on devices running Andoid 6.0 or higher. To enable "Draw over Apps" for LastPass, follow these steps:
+
+       1 Go to the Device Settings
+       2 Tap "Apps"
+       3 On the top right, tap the gear icon
+       4 Under Advanced, chose "Draw over other apps"
+       5 Find LastPass in the list and tap it
+       6 Toggle "Permit drawing over other apps" to ON
