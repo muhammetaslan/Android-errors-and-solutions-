@@ -1,6 +1,35 @@
 # Android-errors-and-solutions-
 
 ------------------------------------------------------------------------------------------------------------------------------------------
+Error 0 -> 
+
+      # Android application display over other apps permission for android 6+
+      
+       public static boolean canDrawOverlays(Context context) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) return true;
+        else if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
+            return Settings.canDrawOverlays(context);
+        } else {
+            if (Settings.canDrawOverlays(context)) return true;
+            try {
+                WindowManager mgr = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+                if (mgr == null) return false; //getSystemService might return null
+                View viewToAdd = new View(context);
+                WindowManager.LayoutParams params = new WindowManager.LayoutParams(0, 0, android.os.Build.VERSION.SDK_INT >=                             android.os.Build.VERSION_CODES.O ?
+                        WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY : WindowManager.LayoutParams.TYPE_SYSTEM_ALERT,
+                        WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,                                   PixelFormat.TRANSPARENT);
+                viewToAdd.setLayoutParams(params);
+                mgr.addView(viewToAdd, params);
+                mgr.removeView(viewToAdd);
+                return true;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return false;
+        }
+    }
+
+------------------------------------------------------------------------------------------------------------------------------------------
 Error 1 -> 
 
       # Gradle sync failed with Android Studio 3.1: Uninitialized object exists on backward branch 70
